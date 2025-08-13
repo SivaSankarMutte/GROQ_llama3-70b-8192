@@ -19,10 +19,11 @@ from PIL import Image
 import fitz  # PyMuPDF
 
 # In Local
-load_dotenv()
+#load_dotenv()
 # os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
 # os.environ['HF_TOKEN'] = os.getenv("HF_TOKEN")
-for streamlit
+
+# for streamlit
 os.environ['GROQ_API_KEY'] = st.secrets["GROQ_API_KEY"]
 os.environ['HF_TOKEN'] = st.secrets["HF_TOKEN"]
 
