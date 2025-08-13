@@ -19,13 +19,12 @@ from PIL import Image
 import fitz  # PyMuPDF
 
 # In Local
-# load_dotenv()
+load_dotenv()
 # os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
 # os.environ['HF_TOKEN'] = os.getenv("HF_TOKEN")
-# for streamlit
+for streamlit
 os.environ['GROQ_API_KEY'] = st.secrets["GROQ_API_KEY"]
 os.environ['HF_TOKEN'] = st.secrets["HF_TOKEN"]
-
 
 # Config
 EXCEL_FILE = "./data/tickets.xlsx"
@@ -136,16 +135,6 @@ if saved_mod_time != last_mod_time or not os.path.exists(VECTOR_STORE_DIR):
 # Load existing vector store
 vector_store = load_vector_store()
 
-# --- Replace this ---
-# query_type = st.radio("Choose input type:", ["Text", "File (PDF/DOCX/Image)"])
-
-# if query_type == "Text":
-#     user_query = st.text_input("📝 Describe a new ticket or ask a question:")
-# else:
-#     uploaded_query_file = st.file_uploader("📂 Upload a query file", type=["txt", "pdf", "docx", "png", "jpg", "jpeg"])
-#     user_query = extract_text_from_file(uploaded_query_file) if uploaded_query_file else ""
-
-# --- With this ---
 # Text input
 text_query = st.text_area("📝 Describe a new ticket or ask a question:")
 
